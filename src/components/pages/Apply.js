@@ -16,7 +16,7 @@ const Apply = (project, props ) => {
     }
     let submitApplicant = (e) => {
         e.preventDefault()
-       Axios.put(`http://localhost:5000/projects/${project.history.location.pathname.slice(7)}`, newApplicant)
+       Axios.put(`${process.env.REACT_APP_URL}/${project.history.location.pathname.slice(7)}`, newApplicant)
        .then((response) => {
            console.log(response)
            setRedirect(true)

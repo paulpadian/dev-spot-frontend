@@ -12,7 +12,7 @@ const AllProjects = () => {
     console.log(userData)
     useEffect(() => {
         console.log("🥇 this is the axios call" )
-        Axios.get(`http://localhost:5000/projects`, {
+        Axios.get(`${process.env.REACT_APP_URL}/projects`, {
             
         }).then(response => {
             console.log(response)

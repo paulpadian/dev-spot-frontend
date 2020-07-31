@@ -31,7 +31,7 @@ const ProjectDashboard = (props) => {
         console.log("🥇 this is the axios call" )
         console.log(userData.user, "🎸")
         console.log(userData.token)
-        Axios.get(`http://localhost:5000/projects/5f22dfe1c86d6a6b22f82751`, {
+        Axios.get(`${process.env.REACT_APP_URL}/projects/5f22dfe1c86d6a6b22f82751`, {
             
             headers:{
             "x-auth-token": userData.token

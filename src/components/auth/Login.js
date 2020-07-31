@@ -19,7 +19,7 @@ export default function Login() {
         email,
         password,
       };
-      const loginRes = await Axios.post("http://localhost:5000/users/login", loginUser);
+      const loginRes = await Axios.post(`${process.env.REACT_APP_URL}/users/login`, loginUser);
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
