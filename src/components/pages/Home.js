@@ -11,7 +11,7 @@ export default function Home() {
     //semantic naming^
     if(!userData.user) history.push('/login');
     try {
-      const userInfo = await Axios.get('http://localhost:5000/users', {
+      const userInfo = await Axios.get(`${process.env.REACT_APP_URL}/users`, {
         headers:{
           "x-auth-token":userData.token
         }

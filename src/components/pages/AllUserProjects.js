@@ -10,7 +10,7 @@ const AllUserProjects = () => {
     async function getAllUserProjects () {
         if(!userData.user) history.push('/login');
         try {
-            const eachProject = await Axios.get('http://localhost:5000/projects/all', {
+            const eachProject = await Axios.get(`${process.env.REACT_APP_URL}/projects/all`, {
                 headers: {
                     "x-auth-token":userData.token
                 }

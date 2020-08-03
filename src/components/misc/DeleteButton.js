@@ -12,7 +12,7 @@ const DeleteButton = (props) => {
         console.log(props.project)
         // if(!userData.username) history.push('/login');
         try {
-            const newProj = await Axios.delete(`http://localhost:5000/projects/${props.project}`, {
+            const newProj = await Axios.delete(`${process.env.REACT_APP_URL}/projects/${props.project}`, {
                 headers:{
                     "x-auth-token":userData.token
                 }

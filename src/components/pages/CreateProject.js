@@ -24,7 +24,7 @@ const CreateProject = () => {
                 title,
                 description
             };
-            const newProj = await Axios.post('http://localhost:5000/projects/new', newProject, {
+            const newProj = await Axios.post(`${process.env.REACT_APP_URL}/projects/new`, newProject, {
                 headers:{
                     "x-auth-token":userData.token
                 }
